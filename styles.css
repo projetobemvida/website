@@ -373,6 +373,57 @@ nav ul li a:hover:after {
     border-radius: 5px;
 }
 
+/* Partners Section */
+.partners {
+    background-color: var(--light-color);
+    padding: 5rem 0;
+}
+
+.partner-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-logo {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    height: auto;
+    transition: var(--transition);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.partner-logo img:hover {
+    transform: scale(1.05);
+}
+
+.partner-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.partner-text h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.partner-text a {
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.partner-text a:hover {
+    color: #e67e22;
+    text-decoration: underline;
+}
+
 /* Contact Section */
 .contact {
     background-color: white;
@@ -507,6 +558,11 @@ footer {
     }
     
     .footer-info {
+        text-align: center;
+    }
+    
+    .partner-content {
+        flex-direction: column;
         text-align: center;
     }
 }
