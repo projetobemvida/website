@@ -6,12 +6,9 @@
     <title>Bem Vida Serviços Elétricos - Instalação de Carregadores</title>
     
     <!-- Preload de recursos críticos -->
-    <link rel="preload" href="images/logo-large-optimized.png" as="image">
-    <link rel="preload" href="images/hero-bg-desktop-optimized.jpg" as="image">
+    <link rel="preload" href="images/logo-large.png" as="image">
     <link rel="preload" href="css/styles.css" as="style">
-    
-    <!-- Cache-Control para recursos estáticos -->
-    <meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
     
     <!-- CSS crítico inline para renderização inicial -->
     <style>
@@ -54,7 +51,7 @@
         }
         .logo img {
             height: 150px;
-            width: 150px;
+            width: auto;
         }
         /* Estilos para a seção hero - usando cor de fundo sólida como fallback */
         .hero {
@@ -63,9 +60,6 @@
             text-align: center;
             padding: 10rem 0 5rem;
             margin-top: 90px;
-            width: 100%;
-            height: auto;
-            position: relative;
         }
         
         /* Estilos para a imagem de perfil */
@@ -76,25 +70,6 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border: 5px solid white;
-        }
-        
-        /* Estilos para evitar layout shifts */
-        .video-thumbnail img {
-            width: 280px;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .partner-logo img {
-            width: 300px;
-            height: 150px;
-            object-fit: contain;
-        }
-        
-        .footer-logo img {
-            width: 90px;
-            height: 90px;
-            object-fit: contain;
         }
     </style>
     
@@ -116,10 +91,10 @@
         function carregarImagemHero() {
             // Caminhos possíveis para a imagem hero
             const caminhos = [
-                'images/hero-bg-desktop-optimized.jpg',
-                './images/hero-bg-desktop-optimized.jpg',
-                '../images/hero-bg-desktop-optimized.jpg',
-                '/images/hero-bg-desktop-optimized.jpg'
+                'images/hero-bg-generic.png',
+                './images/hero-bg-generic.png',
+                '../images/hero-bg-generic.png',
+                '/images/hero-bg-generic.png'
             ];
             
             // Verificar cada caminho
@@ -146,7 +121,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Bem Vida Serviços Elétricos",
-      "image": "https://bemvidaservicoseletricos.com.br/images/logo-large-optimized.png",
+      "image": "https://bemvidaservicoseletricos.com.br/images/logo-large.png",
       "description": "Instalação profissional de carregadores para veículos elétricos de todas as marcas, incluindo BYD, BMW, Tesla, Volvo e outros.",
       "url": "https://bemvidaservicoseletricos.com.br",
       "telephone": "+5511947499755",
@@ -176,7 +151,13 @@
       "sameAs": [
         "https://instagram.com/bemvidaservicoseletricos"
       ],
-      "priceRange": "$$"
+      "priceRange": "$$",
+      "servesCuisine": "Instalação de Carregadores Elétricos",
+      "founder": {
+        "@type": "Person",
+        "name": "Rodrigo Silva",
+        "jobTitle": "Eletricista Especialista"
+      }
     }
     </script>
 </head>
@@ -184,7 +165,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/logo-large-optimized.png" alt="Bem Vida Serviços Elétricos" id="logo" width="150" height="150">
+                <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos" id="logo" width="150" height="150">
             </div>
             <nav>
                 <ul>
@@ -248,7 +229,7 @@
                         <div class="play-button">
                             <i class="fas fa-play"></i>
                         </div>
-                        <img src="images/generic-charger-play-optimized.jpg" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação Wallbox WEG/Volvo. Carregando a 7,4 Kw. Condomínio de Alto Padrão. São Jose dos Campos - SP</h3>
                 </div>
@@ -257,7 +238,7 @@
                         <div class="play-button">
                             <i class="fas fa-play"></i>
                         </div>
-                        <img src="images/generic-charger-play-optimized.jpg" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação Wallbox WEG/Volvo. Carregando a 7,4 Kw. Condomínio de Alto Padrão. Bragança Paulista - SP</h3>
                 </div>
@@ -266,7 +247,7 @@
                         <div class="play-button">
                             <i class="fas fa-play"></i>
                         </div>
-                        <img src="images/generic-charger-play-optimized.jpg" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação Wallbox BMW. Carregando a 7,4 Kw. GARAGE DETAIL Alto Padrão. São Paulo - SP</h3>
                 </div>
@@ -275,7 +256,7 @@
                         <div class="play-button">
                             <i class="fas fa-play"></i>
                         </div>
-                        <img src="images/generic-charger-play-optimized.jpg" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação de carregador WEG/JEEP em Loja de Veículos.</h3>
                 </div>
@@ -284,7 +265,7 @@
                         <div class="play-button">
                             <i class="fas fa-play"></i>
                         </div>
-                        <img src="images/generic-charger-play-optimized.jpg" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Carregador BMW 7,4 kw em Funcionamento. Vaga em Condomínio de Alto Padrão em São Paulo.</h3>
                 </div>
@@ -306,7 +287,7 @@
             <div class="partner-content">
                 <div class="partner-logo">
                     <a href="https://electramobi.com.br/parceria" target="_blank">
-                        <img src="images/logo-electramobi-optimized.png" alt="Electramobi - Conectando Caminhos" width="300" height="150">
+                        <img src="images/logo-electramobi.png" alt="Electramobi - Conectando Caminhos" width="300" height="150">
                     </a>
                 </div>
                 <div class="partner-text">
@@ -329,7 +310,7 @@
                     <p>Nosso compromisso é oferecer um serviço de excelência, com atendimento personalizado e soluções adequadas às necessidades específicas de cada cliente.</p>
                 </div>
                 <div class="about-image">
-                    <img src="images/rodrigo-profile-optimized.jpg" alt="Rodrigo Silva - Eletricista Especialista" width="300" height="300">
+                    <img src="images/rodrigo-profile.jpg" alt="Rodrigo Silva - Eletricista Especialista" width="300" height="300">
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
@@ -360,7 +341,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="images/logo-small-optimized.png" alt="Bem Vida Serviços Elétricos" width="90" height="90">
+                    <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos" width="90" height="90">
                     <p>Rodrigo Silva - Eletricista Especialista em Elétrica Residencial e Mobilidade Elétrica</p>
                 </div>
                 <div class="footer-info">
