@@ -92,10 +92,8 @@ header .container {
 }
 
 .logo img {
-    /* Ajustado para manter proporção com base na largura definida no HTML */
-    max-width: 150px; /* Limita a largura máxima */
-    height: auto;   /* Mantém a proporção automaticamente */
-    display: block; /* Evita espaços extras */
+    height: 150px; /* Aumentado de 50px para 70px */
+    width: auto;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)); /* Adicionado sombra suave */
     transition: var(--transition);
 }
@@ -652,7 +650,7 @@ footer {
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--dark-color); /* Alterado de --secondary-color para --dark-color para melhor contraste com fundo claro */
+    color: var(--secondary-color);
     margin-bottom: 0.5rem;
 }
 

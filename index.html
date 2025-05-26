@@ -6,9 +6,8 @@
     <title>Bem Vida Serviços Elétricos - Instalação de Carregadores</title>
     
     <!-- Preload de recursos críticos -->
-    <link rel="preload" href="images/logo-large.webp" as="image" type="image/webp">
-    <link rel="preload" href="images/hero-bg-generic.webp" as="image" type="image/webp"> <!-- Preload LCP -->
-    <link rel="preload" href="css/styles.min.css" as="style">
+    <link rel="preload" href="images/logo-large.png" as="image">
+    <link rel="preload" href="css/styles.css" as="style">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
     
     <!-- CSS crítico inline para renderização inicial -->
@@ -50,9 +49,9 @@
             align-items: center;
             padding: 1rem 15px;
         }
-        .logo img { /* Manter dimensões explícitas */
-             height: 50px; /* Ajustar conforme CSS ou dimensões reais */
-             width: auto;
+        .logo img {
+            height: 150px;
+            width: auto;
         }
         /* Estilos para a seção hero - usando cor de fundo sólida como fallback */
         .hero {
@@ -60,34 +59,24 @@
             color: white;
             text-align: center;
             padding: 10rem 0 5rem;
-            margin-top: 70px; /* Ajustar conforme altura real do header */
+            margin-top: 90px;
         }
         
         /* Estilos para a imagem de perfil */
         .about-image img {
-            width: 300px; /* Manter dimensões explícitas */
+            width: 300px;
             height: 300px;
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border: 5px solid white;
         }
-        /* Garantir dimensões explícitas para thumbnails de vídeo */
-        .video-thumbnail img {
-             width: 280px;
-             height: 200px;
-             object-fit: cover; /* Adicionar se necessário */
-        }
-         /* Garantir dimensões explícitas para logo de parceiro */
-        .partner-logo img {
-             width: 300px;
-             height: auto; /* Ajustar se altura fixa for necessária */
-        }
     </style>
     
     <!-- CSS não crítico carregado de forma assíncrona -->
-    <link rel="stylesheet" href="css/styles.min.css" media="print" onload="this.media=\'all\'">
-    <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>   
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    
     <!-- Font Awesome carregado de forma assíncrona -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
@@ -96,43 +85,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
-    <!-- Script para carregar a imagem hero (prioriza WebP) -->
+    <!-- Script para carregar a imagem hero de forma compatível com ambiente local e GitHub Pages -->
     <script>
+        // Função para verificar se a imagem existe e aplicá-la como background
         function carregarImagemHero() {
-            const heroElement = document.querySelector('.hero');
-            if (!heroElement) return;
-
-            const webpPath = 'images/hero-bg-generic.webp';
-            const pngPath = 'images/hero-bg-generic.png'; // Fallback
-
-            const imgWebp = new Image();
-            imgWebp.onload = function() {
-                heroElement.style.backgroundImage = `linear-gradient(rgba(10, 59, 108, 0.8), rgba(10, 59, 108, 0.8)), url('${webpPath}')`;
-                heroElement.style.backgroundSize = 'cover';
-                heroElement.style.backgroundPosition = 'center';
-            };
-            imgWebp.onerror = function() {
-                // Fallback para PNG se WebP falhar
-                const imgPng = new Image();
-                imgPng.onload = function() {
-                     heroElement.style.backgroundImage = `linear-gradient(rgba(10, 59, 108, 0.8), rgba(10, 59, 108, 0.8)), url('${pngPath}')`;
-                     heroElement.style.backgroundSize = 'cover';
-                     heroElement.style.backgroundPosition = 'center';
+            // Caminhos possíveis para a imagem hero
+            const caminhos = [
+                'images/hero-bg-generic.png',
+                './images/hero-bg-generic.png',
+                '../images/hero-bg-generic.png',
+                '/images/hero-bg-generic.png'
+            ];
+            
+            // Verificar cada caminho
+            caminhos.forEach(function(caminho) {
+                const img = new Image();
+                img.onload = function() {
+                    // Se a imagem carregar, aplicar como background
+                    document.querySelector('.hero').style.background = 
+                        `linear-gradient(rgba(10, 59, 108, 0.8), rgba(10, 59, 108, 0.8)), url('${caminho}')`;
+                    document.querySelector('.hero').style.backgroundSize = 'cover';
+                    document.querySelector('.hero').style.backgroundPosition = 'center';
                 };
-                imgPng.src = pngPath;
-            };
-            imgWebp.src = webpPath;
+                img.src = caminho;
+            });
         }
+        
+        // Executar quando o DOM estiver carregado
         document.addEventListener('DOMContentLoaded', carregarImagemHero);
     </script>
     
-    <!-- Dados estruturados (URL da imagem atualizada) -->
+    <!-- Dados estruturados -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Bem Vida Serviços Elétricos",
-      "image": "https://bemvidaservicoseletricos.com.br/images/logo-large.webp", 
+      "image": "https://bemvidaservicoseletricos.com.br/images/logo-large.png",
       "description": "Instalação profissional de carregadores para veículos elétricos de todas as marcas, incluindo BYD, BMW, Tesla, Volvo e outros.",
       "url": "https://bemvidaservicoseletricos.com.br",
       "telephone": "+5511947499755",
@@ -176,18 +165,14 @@
     <header>
         <div class="container">
             <div class="logo">
-                 <!-- Tag picture para WebP com fallback PNG -->
-                <picture>
-                    <source srcset="images/logo-large.webp" type="image/webp">
-                    <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos - Logo Principal" id="logo" width="150" height="88"> <!-- Altura explícita adicionada, Alt text melhorado -->
-                </picture>
+                <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos" id="logo" width="150" height="150">
             </div>
             <nav>
                 <ul>
-                    <li><a href="#inicio">Início</a></li> <!-- Links simplificados -->
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#videos">Vídeos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#videos">Vídeos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
                 </ul>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -201,7 +186,7 @@
             <div class="hero-content">
                 <h1>Soluções em Mobilidade Elétrica</h1>
                 <p>Instalação profissional de carregadores para veículos elétricos de todos os fabricantes. Volvo BMW BYD GWM e mais...</p>
-                <a href="#contato" class="btn-primary">Solicite um Orçamento</a> <!-- Link simplificado -->
+                <a href="index.html#contato" class="btn-primary">Solicite um Orçamento</a>
             </div>
         </div>
     </section>
@@ -239,63 +224,52 @@
         <div class="container">
             <h2>Vídeos de Instalações</h2>
             <div class="videos-container">
-                <!-- Item de Vídeo 1 -->
                 <div class="video-item">
                     <div class="video-thumbnail" data-video="https://youtube.com/shorts/N-eU_JKUBMM?si=XwvAr_wEzv_2Di5C">
-                        <!-- Botão de play removido -->
-                        <picture>
-                           <source srcset="images/generic-charger-play.webp" type="image/webp">
-                           <img src="images/generic-charger-play.png" alt="Vídeo Instalação Wallbox WEG/Volvo São José dos Campos" width="280" height="200" loading="lazy">
-                        </picture>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação Wallbox WEG/Volvo. Carregando a 7,4 Kw. Condomínio de Alto Padrão. São Jose dos Campos - SP</h3>
                 </div>
-                 <!-- Item de Vídeo 2 -->
                 <div class="video-item">
                     <div class="video-thumbnail" data-video="https://youtube.com/shorts/Ie4-JBgMf68">
-                         <!-- Botão de play removido -->
-                         <picture>
-                           <source srcset="images/generic-charger-play.webp" type="image/webp">
-                           <img src="images/generic-charger-play.png" alt="Vídeo Instalação Wallbox WEG/Volvo Bragança Paulista" width="280" height="200" loading="lazy">
-                        </picture>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação Wallbox WEG/Volvo. Carregando a 7,4 Kw. Condomínio de Alto Padrão. Bragança Paulista - SP</h3>
                 </div>
-                 <!-- Item de Vídeo 3 -->
                 <div class="video-item">
                     <div class="video-thumbnail" data-video="https://youtube.com/shorts/oXyueCdZbvs">
-                         <!-- Botão de play removido -->
-                         <picture>
-                           <source srcset="images/generic-charger-play.webp" type="image/webp">
-                           <img src="images/generic-charger-play.png" alt="Vídeo Instalação Wallbox BMW São Paulo" width="280" height="200" loading="lazy">
-                        </picture>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação Wallbox BMW. Carregando a 7,4 Kw. GARAGE DETAIL Alto Padrão. São Paulo - SP</h3>
                 </div>
-                 <!-- Item de Vídeo 4 -->
                 <div class="video-item">
                     <div class="video-thumbnail" data-video="https://youtube.com/shorts/qq8xfPpcbM0?si=f3iJS2XZRg2EDP2b">
-                         <!-- Botão de play removido -->
-                         <picture>
-                           <source srcset="images/generic-charger-play.webp" type="image/webp">
-                           <img src="images/generic-charger-play.png" alt="Vídeo Instalação carregador WEG/JEEP" width="280" height="200" loading="lazy">
-                        </picture>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Instalação de carregador WEG/JEEP em Loja de Veículos.</h3>
                 </div>
-                 <!-- Item de Vídeo 5 -->
                 <div class="video-item">
                     <div class="video-thumbnail" data-video="https://youtube.com/shorts/z3i20l_zcMA?si=Ng0UyhvtwWipN5kw">
-                         <!-- Botão de play removido -->
-                         <picture>
-                           <source srcset="images/generic-charger-play.webp" type="image/webp">
-                           <img src="images/generic-charger-play.png" alt="Vídeo Carregador BMW em Funcionamento São Paulo" width="280" height="200" loading="lazy">
-                        </picture>
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
                     </div>
                     <h3>Carregador BMW 7,4 kw em Funcionamento. Vaga em Condomínio de Alto Padrão em São Paulo.</h3>
                 </div>
             </div>
-            <!-- Modal de Vídeo (sem alterações de performance aqui) -->
             <div id="video-modal" class="modal">
                 <div class="modal-content">
                     <span class="close-modal">&times;</span>
@@ -313,11 +287,7 @@
             <div class="partner-content">
                 <div class="partner-logo">
                     <a href="https://electramobi.com.br/parceria" target="_blank">
-                         <!-- Tag picture para WebP com fallback PNG -->
-                        <picture>
-                           <source srcset="images/logo-electramobi.webp" type="image/webp">
-                           <img src="images/logo-electramobi.png" alt="Electramobi - Conectando Caminhos" width="300" height="83"> <!-- Altura explícita adicionada -->
-                        </picture>
+                        <img src="images/logo-electramobi.png" alt="Electramobi - Conectando Caminhos" width="300" height="150">
                     </a>
                 </div>
                 <div class="partner-text">
@@ -340,11 +310,7 @@
                     <p>Nosso compromisso é oferecer um serviço de excelência, com atendimento personalizado e soluções adequadas às necessidades específicas de cada cliente.</p>
                 </div>
                 <div class="about-image">
-                     <!-- Tag picture para WebP com fallback JPG -->
-                    <picture>
-                       <source srcset="images/rodrigo-profile.webp" type="image/webp">
-                       <img src="images/rodrigo-profile.jpg" alt="Rodrigo Silva - Eletricista Especialista" width="300" height="300"> <!-- Dimensões explícitas mantidas -->
-                    </picture>
+                    <img src="images/rodrigo-profile.jpg" alt="Rodrigo Silva - Eletricista Especialista" width="300" height="300">
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
@@ -373,13 +339,23 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Bem Vida Serviços Elétricos. Todos os direitos reservados.</p>
-            <!-- <p>Desenvolvido por <a href="https://seusite.com" target="_blank">Seu Nome/Empresa</a></p> --> <!-- Crédito do desenvolvedor opcional -->
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos" width="90" height="90">
+                    <p>Rodrigo Silva - Eletricista Especialista em Elétrica Residencial e Mobilidade Elétrica</p>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 Bem Vida Serviços Elétricos. Todos os direitos reservados.</p>
+                    <div class="social-media">
+                        <a href="https://instagram.com/bemvidaservicoseletricos" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5511947499755" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Script JS carregado com defer -->
-    <script src="js/script.min.js" defer></script>
+    <!-- Script carregado de forma assíncrona -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>
-
