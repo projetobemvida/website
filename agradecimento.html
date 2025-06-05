@@ -1,35 +1,242 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Obrigado pelo contato</title>
-  <meta http-equiv="refresh" content="3; url=https://wa.me/5511947499755">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background-color: #f1f1f1;
-    }
-    .container {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      display: inline-block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecemos seu contato - Bem Vida Serviços Elétricos</title>
+    <meta name="facebook-domain-verification" content="wo2ukrfhkyr2bqaf4yk5ysy0o03wzm" />
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2419081288447485');
+    fbq('track', 'PageView');
+    // Evento de conversão personalizado
+    fbq('track', 'WhatsAppConversao');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2419081288447485&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="images/logo-large.png" as="image">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- CSS crítico inline para renderização inicial -->
+    <style>
+        /* CSS crítico para renderização inicial */
+        :root {
+            --primary-color: #0a3b6c;
+            --secondary-color: #ffcc00;
+            --accent-color: #25d366;
+            --dark-color: #0a2342;
+            --light-color: #f8f9fa;
+            --text-color: #444;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        header {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 15px;
+        }
+        .logo img {
+            height: 150px;
+            width: auto;
+        }
+        
+        /* Estilos específicos para a página de agradecimento */
+        .thank-you {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 10rem 0 5rem;
+            margin-top: 90px;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .thank-you-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .thank-you h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .thank-you p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .loader {
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 5px solid var(--secondary-color);
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1da851;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .thank-you {
+                padding: 8rem 0 3rem;
+            }
+            
+            .thank-you h1 {
+                font-size: 2rem;
+            }
+            
+            .thank-you p {
+                font-size: 1rem;
+            }
+            
+            .thank-you-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    
+    <!-- CSS não crítico carregado de forma assíncrona -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    
+    <!-- Font Awesome carregado de forma assíncrona -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    
+    <!-- Google Fonts carregado de forma assíncrona -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 </head>
 <body>
-  <div class="container">
-    <h1>Obrigado pelo contato!</h1>
-    <p>Você será redirecionado para o WhatsApp em instantes...</p>
-  </div>
-  <script>
-  setTimeout(function() {
-    window.location.href = "website/agradecimento.html";
-  }, 3000); // Redireciona após 3 segundos
-</script>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos" id="logo" width="150" height="150">
+            </div>
+        </div>
+    </header>
 
+    <section class="thank-you">
+        <div class="container">
+            <div class="thank-you-content">
+                <h1>Agradecemos seu contato!</h1>
+                <p>Estamos redirecionando você para o WhatsApp para iniciar nossa conversa.</p>
+                <div class="loader"></div>
+                <div class="countdown" id="countdown">5</div>
+                <p>Se não for redirecionado automaticamente, clique no botão abaixo:</p>
+                <a href="#" class="btn-primary" id="whatsapp-redirect">Continuar para o WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuração do número do WhatsApp e mensagem
+            const phoneNumber = '5511947499755';
+            const message = 'Olá, gostaria de saber mais sobre seus serviços de instalação de carregadores.';
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            // Configurar o link do botão
+            const redirectButton = document.getElementById('whatsapp-redirect');
+            redirectButton.href = whatsappUrl;
+            
+            // Contador regressivo e redirecionamento automático
+            let secondsLeft = 5;
+            const countdownElement = document.getElementById('countdown');
+            
+            const countdownInterval = setInterval(function() {
+                secondsLeft--;
+                countdownElement.textContent = secondsLeft;
+                
+                if (secondsLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = whatsappUrl;
+                }
+            }, 1000);
+            
+            // Registrar evento de conversão personalizado
+            if (typeof gtag === 'function') {
+                gtag('event', 'whatsapp_conversion', {
+                    'event_category': 'Conversão',
+                    'event_label': 'Clique WhatsApp'
+                });
+            }
+        });
+    </script>
 </body>
 </html>
