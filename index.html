@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Vida Serviços Elétricos - Instalação de Carregadores</title>
+    <meta name="facebook-domain-verification" content="wo2ukrfhkyr2bqaf4yk5ysy0o03wzm" />
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2419081288447485');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2419081288447485&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="images/logo-large.png" as="image">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- CSS crítico inline para renderização inicial -->
+    <style>
+        /* CSS crítico para renderização inicial */
+        :root {
+            --primary-color: #0a3b6c;
+            --secondary-color: #ffcc00;
+            --accent-color: #25d366;
+            --dark-color: #0a2342;
+            --light-color: #f8f9fa;
+            --text-color: #444;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        header {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 15px;
+        }
+        .logo img {
+            height: 150px;
+            width: auto;
+        }
+        /* Estilos para a seção hero - usando cor de fundo sólida como fallback */
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 10rem 0 5rem;
+            margin-top: 90px;
+        }
+        
+        /* Estilos para a imagem de perfil */
+        .about-image img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 5px solid white;
+        }
+    </style>
+    
+    <!-- CSS não crítico carregado de forma assíncrona -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+    
+    <!-- Font Awesome carregado de forma assíncrona -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    
+    <!-- Google Fonts carregado de forma assíncrona -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Script para carregar a imagem hero de forma compatível com ambiente local e GitHub Pages -->
+    <script>
+        // Função para verificar se a imagem existe e aplicá-la como background
+        function carregarImagemHero() {
+            // Caminhos possíveis para a imagem hero
+            const caminhos = [
+                'images/hero-bg-generic.png',
+                './images/hero-bg-generic.png',
+                '../images/hero-bg-generic.png',
+                '/images/hero-bg-generic.png'
+            ];
+            
+            // Verificar cada caminho
+            caminhos.forEach(function(caminho) {
+                const img = new Image();
+                img.onload = function() {
+                    // Se a imagem carregar, aplicar como background
+                    document.querySelector('.hero').style.background = 
+                        `linear-gradient(rgba(10, 59, 108, 0.8), rgba(10, 59, 108, 0.8)), url('${caminho}')`;
+                    document.querySelector('.hero').style.backgroundSize = 'cover';
+                    document.querySelector('.hero').style.backgroundPosition = 'center';
+                };
+                img.src = caminho;
+            });
+        }
+        
+        // Executar quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', carregarImagemHero);
+    </script>
+    
+    <!-- Dados estruturados -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bem Vida Serviços Elétricos",
+      "image": "https://bemvidaservicoseletricos.com.br/images/logo-large.png",
+      "description": "Instalação profissional de carregadores para veículos elétricos de todas as marcas, incluindo BYD, BMW, Tesla, Volvo e outros.",
+      "url": "https://bemvidaservicoseletricos.com.br",
+      "telephone": "+5511947499755",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.5505,
+        "longitude": -46.6333
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://instagram.com/bemvidaservicoseletricos"
+      ],
+      "priceRange": "$$",
+      "servesCuisine": "Instalação de Carregadores Elétricos",
+      "founder": {
+        "@type": "Person",
+        "name": "Rodrigo Silva",
+        "jobTitle": "Eletricista Especialista"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos" id="logo" width="150" height="150">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#videos">Vídeos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Soluções em Mobilidade Elétrica</h1>
+                <p>Instalação profissional de carregadores para veículos elétricos de todos os fabricantes. Volvo BMW BYD GWM e mais...</p>
+                <a href="index.html#contato" class="btn-primary">Solicite um Orçamento</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-charging-station"></i>
+                    <h3>Instalação de Carregadores</h3>
+                    <p>Instalação profissional de carregadores para veículos elétricos de todas as marcas, incluindo BYD, BMW, Tesla, Volvo e outros.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Elétrica Residencial</h3>
+                    <p>Serviços completos de instalação e manutenção elétrica para sua residência, seguindo as normas NBR 5410 e NBR 17019.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Manutenção Preventiva</h3>
+                    <p>Manutenção preventiva para garantir o funcionamento seguro de suas instalações elétricas e carregadores.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certificação e Homologação</h3>
+                    <p>Certificação e homologação de instalações elétricas conforme normas técnicas vigentes para todos os tipos de carregadores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="videos" class="videos">
+        <div class="container">
+            <h2>Vídeos de Instalações</h2>
+            <div class="videos-container">
+                <div class="video-item">
+                    <div class="video-thumbnail" data-video="https://youtube.com/shorts/N-eU_JKUBMM?si=XwvAr_wEzv_2Di5C">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                    </div>
+                    <h3>Instalação Wallbox WEG/Volvo. Carregando a 7,4 Kw. Condomínio de Alto Padrão. São Jose dos Campos - SP</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail" data-video="https://youtube.com/shorts/Ie4-JBgMf68">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                    </div>
+                    <h3>Instalação Wallbox WEG/Volvo. Carregando a 7,4 Kw. Condomínio de Alto Padrão. Bragança Paulista - SP</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail" data-video="https://youtube.com/shorts/oXyueCdZbvs">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                    </div>
+                    <h3>Instalação Wallbox BMW. Carregando a 7,4 Kw. GARAGE DETAIL Alto Padrão. São Paulo - SP</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail" data-video="https://youtube.com/shorts/qq8xfPpcbM0?si=f3iJS2XZRg2EDP2b">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                    </div>
+                    <h3>Instalação de carregador WEG/JEEP em Loja de Veículos.</h3>
+                </div>
+                <div class="video-item">
+                    <div class="video-thumbnail" data-video="https://youtube.com/shorts/z3i20l_zcMA?si=Ng0UyhvtwWipN5kw">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="images/generic-charger-play.png" alt="Vídeo de Instalação" width="280" height="200" loading="lazy">
+                    </div>
+                    <h3>Carregador BMW 7,4 kw em Funcionamento. Vaga em Condomínio de Alto Padrão em São Paulo.</h3>
+                </div>
+            </div>
+            <div id="video-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="video-container">
+                        <iframe id="video-frame" src="about:blank" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+       <section id="sobre" class="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Rodrigo Silva - Eletricista Especialista</h3>
+                    <p> Da Experiência Residencial à Mobilidade Elétrica: Sou Rodrigo Augusto Da Silva, Eletricista Instalador formado pelo SENAI e fundador da Bem Vida Serviços Elétricos. Minha trajetória começou com foco em instalações elétricas residenciais, sempre prezando pela segurança e qualidade, seguindo normas como a NBR 5410.</p>
+                    <p>Com o avanço dos veículos elétricos, busquei especialização para atender essa nova demanda, realizando cursos específicos no SENAI, incluindo Veículos Elétricos e Híbridos e E-mobility. Hoje, uno minha experiência em elétrica residencial ao conhecimento técnico necessário para instalar carregadores veiculares com eficiência e segurança</p>
+                    <p>Na Bem Vida, entendemos que cada cliente tem uma necessidade única. Por isso, oferecemos um atendimento personalizado, analisando sua estrutura e rotina para indicar a melhor solução em carregadores (WEG, Volvo, BMW, BYD, GWM, entre outros), sempre em conformidade com as normas técnicas (NBR 17019).</p>
+                    <p>.Embora esteja sempre me atualizando neste mercado de veículos elétricos, meu compromisso é oferecer um serviço que combine conhecimento técnico e foco nos benefícios para você: uma instalação segura, prática e adequada ao seu dia a dia.Conte com a Bem Vida Serviços Elétricos para cuidar da sua instalação elétrica residencial e da infraestrutura para seu veículo elétrico com profissionalismo e confiança. </p>
+                </div>
+                <div class="about-image">
+                    <img src="images/rodrigo-profile.jpg" alt="Rodrigo Silva - Eletricista Especialista" width="300" height="300">
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-text">Projetos Realizados</span>
+                    </div>
+                   
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-text">Clientes Satisfeitos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <section id="parceiros" class="partners">
+        <div class="container">
+            <h2>Parceiros Recomendados</h2>
+            <div class="partner-content">
+                <div class="partner-logo">
+                    <a href="https://electramobi.com.br/parceria" target="_blank">
+                        <img src="images/logo-electramobi.png" alt="Electramobi - Conectando Caminhos" width="300" height="150">
+                    </a>
+                </div>
+                <div class="partner-text">
+                    <h3>Electramobi - Soluções em Carregadores</h3>
+                    <p>Além da instalação profissional, oferecemos aos nossos clientes a indicação de fornecedores confiáveis para a aquisição de carregadores de alta qualidade. A Electramobi é nossa parceira recomendada, oferecendo uma ampla gama de carregadores para veículos elétricos com excelente custo-benefício.</p>
+                    <p>Visite a <a href="https://electramobi.com.br/parceria" target="_blank">loja online da Electramobi</a> e conheça as opções disponíveis para seu veículo elétrico. Após a compra, estamos prontos para realizar a instalação com toda a segurança e qualidade que você merece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <p>Estamos prontos para atender suas necessidades em instalações elétricas e carregadores para veículos elétricos de todas as marcas. Entre em contato pelo WhatsApp para um orçamento sem compromisso.</p>
+            <a href="agradecimento.html" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Fale com Rodrigo Silva pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-large.png" alt="Bem Vida Serviços Elétricos" width="90" height="90">
+                    <p>Rodrigo Silva - Eletricista Especialista em Elétrica Residencial e Mobilidade Elétrica</p>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2025 Bem Vida Serviços Elétricos. Todos os direitos reservados.</p>
+                    <div class="social-media">
+                        <a href="https://instagram.com/bemvidaservicoseletricos" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5511947499755" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script carregado de forma assíncrona -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
