@@ -139,12 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Atualizar número do WhatsApp no link
-    const whatsappBtn = document.querySelector('.whatsapp-btn');
-    const phoneNumber = '5511947499755'; // Número real do Rodrigo Silva
-    const message = 'Olá, gostaria de saber mais sobre seus serviços de instalação de carregadores.';
-    
-    whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    // Removida a atualização do link do WhatsApp, pois agora ele direciona para a página de agradecimento
+    // O redirecionamento para o WhatsApp acontece na página de agradecimento
     
     // Funcionalidade para os vídeos do YouTube
     const videoThumbnails = document.querySelectorAll('.video-thumbnail');
